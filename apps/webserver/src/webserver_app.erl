@@ -24,9 +24,9 @@ start(_StartType, _StartArgs) ->
 	}),
     {ok, _} = cowboy:start_tls(example, [
             {port, PortTls},
-            {certfile, "/Users/liuxy/Downloads/certs/cert.pem"},
-            {cacertfile, "/Users/liuxy/Downloads/certs/cacert.pem"},
-            {keyfile, "/Users/liuxy/Downloads/certs/key.pem"}
+            {certfile, "./certs/cert.pem"},
+            {cacertfile, "./certs/cacert.pem"},
+            {keyfile, "./certs/key.pem"}
         ], #{
         env => #{dispatch => Dispatch}
     }),
